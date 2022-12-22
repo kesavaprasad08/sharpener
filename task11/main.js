@@ -27,7 +27,7 @@ function onSubmit(e) {
 e.preventDefault();
 
 if (nameInput.value === "" || emailInput.value === "") {
-    msg.classList.add("error");
+ msg.classList.add("error");
 
     msg.innerHTML = "please enter all fields";
 
@@ -41,10 +41,7 @@ var myobjserialized =JSON.stringify(myobj);
 console.log(myobjserialized);
 
 localStorage.setItem('myobj',myobjserialized);
-
 console.log(JSON.parse(localStorage.getItem('myobj')));
-
-
 }
 nameInput.value = "";
 emailInput.value = "";
