@@ -33,9 +33,18 @@ if (nameInput.value === "" || emailInput.value === "") {
 
     setTimeout(() => msg.remove(), 3000);
 } else {
+var myobj = {
+    name : nameInput.value,
+     email: emailInput.value
+}
+var myobjserialized =JSON.stringify(myobj);
+console.log(myobjserialized);
 
-    localStorage.setItem('name',nameInput.value);
-    localStorage.setItem('email',emailInput.value);
+localStorage.setItem('myobj',myobjserialized);
+
+console.log(JSON.parse(localStorage.getItem('myobj')));
+
+
 }
 nameInput.value = "";
 emailInput.value = "";
